@@ -134,13 +134,13 @@ namespace QLDSV_TC.views
                 Program.mHoten = Program.myReader.GetString(1);
                 Program.mGroup = Program.myReader.GetString(2);
                 Program.myReader.Close();
-                //Program.frmChinh = new Main();
-                //Program.frmChinh.statusMa.Text = "MÃ: " + Program.username.ToUpper();
-                //Program.frmChinh.statusTen.Text = "TÊN: " + Program.mHoten;
-                //Program.frmChinh.statusKhoa.Text = "QUYỀN: " + Program.mGroup;
+                Program.frmMain = new frmMain();
+                Program.frmMain.toolStripMa.Text = "MÃ: " + Program.username.ToUpper();
+                Program.frmMain.toolStripTen.Text = "TÊN: " + Program.mHoten;
+                Program.frmMain.toolStripKhoa.Text = "QUYỀN: " + Program.mGroup;
                 this.Visible = false;
                 Thread.Sleep(500);
-                //Program.frmChinh.Show();
+                Program.frmMain.Show();
             }
             catch (Exception ex)
             {

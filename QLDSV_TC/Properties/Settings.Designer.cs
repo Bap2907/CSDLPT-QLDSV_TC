@@ -26,11 +26,22 @@ namespace QLDSV_TC.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\MINT1;Initial Catalog=QLDSV_TC;Persist Security Info=True;User ID" +
-            "=SV01;TrustServerCertificate=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LOCLE-LAP;Initial Catalog=QLDSV_TC;Persist Security Info=True;User ID" +
+            "=sa;Password=Lehuuloc1;Encrypt=True;TrustServerCertificate=True")]
         public string QLDSV_TCConnectionString {
             get {
                 return ((string)(this["QLDSV_TCConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LOCLE-LAP\\SERVER1;Initial Catalog=QLDSV_TC;Persist Security Info=True" +
+            ";User ID=sa;Password=Lehuuloc1;Encrypt=True;TrustServerCertificate=True")]
+        public string QLDSV_TCConnectionString1 {
+            get {
+                return ((string)(this["QLDSV_TCConnectionString1"]));
             }
         }
     }

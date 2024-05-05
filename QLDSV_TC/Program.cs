@@ -17,7 +17,7 @@ namespace QLDSV_TC
         public static SqlConnection conn = new SqlConnection();
         public static String connstr;
         public static SqlCommand sqlcmd = new SqlCommand();
-        public static String constr_publisher = "Data Source=MSI\\MINT; Initial Catalog=QLDSV_TC; Integrated Security=true";
+        public static String constr_publisher = "Data Source=LOCLE-LAP; Initial Catalog=QLDSV_TC; Integrated Security=true";
 
         public static SqlDataReader myReader;
         public static String servername = "";
@@ -39,7 +39,7 @@ namespace QLDSV_TC
 
         public static BindingSource bdsDSPM = new BindingSource();//dùng để giữ ds phân mảnh khi login
         public static views.Login Login;
-        //public static views.Main frmChinh;
+        public static frmMain frmMain;
         //public static views.frmClass frmClass;
         //public static views.frmMH frmMH;
         //public static views.frmLTC frmLTC;
