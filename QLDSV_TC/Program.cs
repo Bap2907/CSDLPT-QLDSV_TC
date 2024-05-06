@@ -39,7 +39,7 @@ namespace QLDSV_TC
 
         public static BindingSource bdsDSPM = new BindingSource();//dùng để giữ ds phân mảnh khi login
         public static views.Login Login;
-        public static frmMain frmMain;
+        public static views.frmMain frmMain;
         //public static views.frmClass frmClass;
         //public static views.frmMH frmMH;
         //public static views.frmLTC frmLTC;

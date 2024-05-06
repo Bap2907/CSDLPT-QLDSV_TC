@@ -9,8 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLDSV_TC.views;
 
-namespace QLDSV_TC
+namespace QLDSV_TC.views
 {
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -40,31 +41,6 @@ namespace QLDSV_TC
             Application.Exit();
         }
 
-        //private void barButtonXEMDIEM_ItemClick(object sender, ItemClickEventArgs e)
-        //{
-        //    Form frm = CheckExists(typeof(views.frmXemDiem));
-        //    if (frm != null) frm.Activate();
-        //    else
-        //    {
-        //        frmXemDiem frmxemdiem = new frmXemDiem();
-        //        frmxemdiem.MdiParent = this;
-        //        frmxemdiem.Show();
-
-        //    }
-        //}
-
-        //private void barButtonDANGKYLTC_ItemClick(object sender, ItemClickEventArgs e)
-        //{
-        //    Form frm = CheckExists(typeof(views.frmDangKyLTC));
-        //    if (frm != null) frm.Activate();
-        //    else
-        //    {
-        //        frmDangKyLTC frmDkLTC = new frmDangKyLTC();
-        //        frmDkLTC.MdiParent = this;
-        //        frmDkLTC.Show();
-
-        //    }
-        //}
         private void btnDX_ItemClick(object sender, ItemClickEventArgs e)
         {
             DialogResult dialog = XtraMessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo!", MessageBoxButtons.YesNo);
@@ -83,5 +59,31 @@ namespace QLDSV_TC
         {
 
         }
+
+        private void barButtonXEMDIEM_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.frmXemDiem));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmXemDiem frmxemdiem = new frmXemDiem();
+                frmxemdiem.MdiParent = this;
+                frmxemdiem.Show();
+
+            }
+        }
+
+        //private void barButtonDANGKYLTC_ItemClick(object sender, ItemClickEventArgs e)
+        //{
+        //    Form frm = CheckExists(typeof(views.frmDangKyLTC));
+        //    if (frm != null) frm.Activate();
+        //    else
+        //    {
+        //        frmDangKyLTC frmDkLTC = new frmDangKyLTC();
+        //        frmDkLTC.MdiParent = this;
+        //        frmDkLTC.Show();
+
+        //    }
+        //}
     }
 }
