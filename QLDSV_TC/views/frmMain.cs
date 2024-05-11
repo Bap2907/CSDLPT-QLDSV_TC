@@ -73,17 +73,17 @@ namespace QLDSV_TC.views
             }
         }
 
-        //private void barButtonDANGKYLTC_ItemClick(object sender, ItemClickEventArgs e)
-        //{
-        //    Form frm = CheckExists(typeof(views.frmDangKyLTC));
-        //    if (frm != null) frm.Activate();
-        //    else
-        //    {
-        //        frmDangKyLTC frmDkLTC = new frmDangKyLTC();
-        //        frmDkLTC.MdiParent = this;
-        //        frmDkLTC.Show();
+        private void barButtonDANGKYLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.frmDangKyLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmDangKyLTC frmDkLTC = new frmDangKyLTC();
+                frmDkLTC.MdiParent = this;
+                frmDkLTC.Show();
 
-        //    }
-        //}
+            }
+        }
     }
 }

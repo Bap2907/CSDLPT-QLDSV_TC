@@ -68,6 +68,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLDSV_TCDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="views\frmDangKyLTC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmDangKyLTC.Designer.cs">
+      <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\frmXemDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\frmDangKyLTC.resx">
+      <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\frmXemDiem.resx">
       <DependentUpon>frmXemDiem.cs</DependentUpon>
     </EmbeddedResource>

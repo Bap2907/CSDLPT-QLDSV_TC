@@ -77,3 +77,4 @@ C:\CSDLPT\CSDLPT-QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.XtraTreeList.v22.2.xml
 C:\CSDLPT\CSDLPT-QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.Office.v22.2.Core.xml
 C:\CSDLPT\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.views.frmXemDiem.resources
 C:\CSDLPT\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.views.frmMain.resources
+C:\CSDLPT\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.views.frmDangKyLTC.resources

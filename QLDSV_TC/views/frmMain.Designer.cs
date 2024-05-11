@@ -57,7 +57,6 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonSinhVien});
             this.ribbonControl1.Size = new System.Drawing.Size(878, 209);
-            //this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
             // 
             // barButtonDANGKYLTC
             // 
@@ -66,7 +65,7 @@
             this.barButtonDANGKYLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonDANGKYLTC.ImageOptions.Image")));
             this.barButtonDANGKYLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonDANGKYLTC.ImageOptions.LargeImage")));
             this.barButtonDANGKYLTC.Name = "barButtonDANGKYLTC";
-            //this.barButtonDANGKYLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonDANGKYLTC_ItemClick);
+            this.barButtonDANGKYLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonDANGKYLTC_ItemClick);
             // 
             // barButtonXEMDIEM
             // 
