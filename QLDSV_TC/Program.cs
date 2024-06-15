@@ -2,6 +2,7 @@
 using DevExpress.UserSkins;
 using DevExpress.Utils;
 using DevExpress.XtraEditors;
+using QLDSV_TC.views;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -50,7 +51,7 @@ namespace QLDSV_TC
          public static formManagerSubject frmSubject;*/
 
         public static int chiPhi = 480000;  //tiền học/1 tín
-
+        internal static frmMH frmMH;
 
         public static int KetNoi(Boolean isShow = true)
         {

@@ -74,6 +74,12 @@
     <Compile Include="views\frmDangKyLTC.Designer.cs">
       <DependentUpon>frmDangKyLTC.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\frmMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\frmMH.Designer.cs">
+      <DependentUpon>frmMH.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\frmXemDiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="views\frmDangKyLTC.resx">
       <DependentUpon>frmDangKyLTC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\frmMH.resx">
+      <DependentUpon>frmMH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\frmXemDiem.resx">
       <DependentUpon>frmXemDiem.cs</DependentUpon>
