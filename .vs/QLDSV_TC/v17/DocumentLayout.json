@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|c:\\csdlpt\\csdlpt-qldsv_tc\\qldsv_tc\\views\\frmdangkyltc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|solutionrelative:qldsv_tc\\views\\frmdangkyltc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|c:\\csdlpt\\csdlpt-qldsv_tc\\qldsv_tc\\views\\frmmh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|solutionrelative:qldsv_tc\\views\\frmmh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|c:\\csdlpt\\csdlpt-qldsv_tc\\qldsv_tc\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|solutionrelative:qldsv_tc\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|c:\\csdlpt\\csdlpt-qldsv_tc\\qldsv_tc\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|solutionrelative:qldsv_tc\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|c:\\csdlpt\\csdlpt-qldsv_tc\\qldsv_tc\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|solutionrelative:qldsv_tc\\views\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|c:\\csdlpt\\csdlpt-qldsv_tc\\qldsv_tc\\views\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{872F0593-D550-43CD-B97C-7C33C83C2E96}|QLDSV_TC\\QLDSV_TC.csproj|solutionrelative:qldsv_tc\\views\\frmmain.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,52 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmDangKyLTC.cs",
-              "DocumentMoniker": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmDangKyLTC.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC\\views\\frmDangKyLTC.cs",
-              "ToolTip": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmDangKyLTC.cs",
-              "RelativeToolTip": "QLDSV_TC\\views\\frmDangKyLTC.cs",
-              "ViewState": "AQIAAKAAAAAAAAAAAAAcwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T08:25:31.145Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC\\views\\frmMain.cs",
-              "ToolTip": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.cs",
-              "RelativeToolTip": "QLDSV_TC\\views\\frmMain.cs",
-              "ViewState": "AQIAAEMAAAAAAAAAAIAwwFQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:38:43.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmMH.cs [Design]",
-              "DocumentMoniker": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMH.cs",
-              "RelativeDocumentMoniker": "QLDSV_TC\\views\\frmMH.cs",
-              "ToolTip": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMH.cs [Design]",
-              "RelativeToolTip": "QLDSV_TC\\views\\frmMH.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:05:17.834Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.cs",
               "RelativeDocumentMoniker": "QLDSV_TC\\views\\frmMain.cs",
               "ToolTip": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.cs [Design]",
               "RelativeToolTip": "QLDSV_TC\\views\\frmMain.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-21T08:21:51.045Z",
+              "WhenOpened": "2024-06-16T08:10:01.814Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frmMain.Designer.cs",
+              "DocumentMoniker": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.Designer.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC\\views\\frmMain.Designer.cs",
+              "ToolTip": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.Designer.cs",
+              "RelativeToolTip": "QLDSV_TC\\views\\frmMain.Designer.cs",
+              "ViewState": "AQIAAIsAAAAAAAAAAAAkwJQAAAB7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T07:00:54.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.cs",
+              "RelativeDocumentMoniker": "QLDSV_TC\\views\\frmMain.cs",
+              "ToolTip": "C:\\CSDLPT\\CSDLPT-QLDSV_TC\\QLDSV_TC\\views\\frmMain.cs",
+              "RelativeToolTip": "QLDSV_TC\\views\\frmMain.cs",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAuwHgAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T06:59:36.684Z",
+              "EditorCaption": ""
             }
           ]
         }

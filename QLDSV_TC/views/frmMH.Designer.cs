@@ -510,7 +510,7 @@ namespace QLDSV_TC.views
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMH";
             this.Text = "Môn Học";

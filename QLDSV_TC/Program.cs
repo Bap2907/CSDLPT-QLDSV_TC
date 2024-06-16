@@ -52,6 +52,8 @@ namespace QLDSV_TC
 
         public static int chiPhi = 480000;  //tiền học/1 tín
         internal static frmMH frmMH;
+        internal static frmLTC frmLTC;
+        internal static frmNhapDiem frmNhapDiem;
 
         public static int KetNoi(Boolean isShow = true)
         {
@@ -101,9 +103,9 @@ namespace QLDSV_TC
         {
             DataTable dt = new DataTable();
             if (Program.conn.State == ConnectionState.Closed) Program.conn.Open();
-            SqlDataAdapter da = new SqlDataAdapter(cmd, conn);
-            da.Fill(dt);
-            conn.Close();
+            //SqlDataAdapter da = new SqlDataAdapter(cmd, conn);
+            //da.Fill(dt);
+            //conn.Close();
             return dt;
         }
 
