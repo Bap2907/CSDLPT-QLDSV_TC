@@ -54,6 +54,7 @@ namespace QLDSV_TC
         internal static frmMH frmMH;
         internal static frmLTC frmLTC;
         internal static frmNhapDiem frmNhapDiem;
+        internal static frmClass frmClass;
 
         public static int KetNoi(Boolean isShow = true)
         {

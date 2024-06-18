@@ -126,5 +126,18 @@ namespace QLDSV_TC.views
                 Program.frmNhapDiem.Show();
             }
         }
+
+        private void barButtonClass_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.frmClass));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Program.frmClass = new frmClass();
+                Program.frmClass.MdiParent = this;
+                Program.frmClass.WindowState = FormWindowState.Maximized;
+                Program.frmClass.Show();
+            }
+        }
     }
 }
