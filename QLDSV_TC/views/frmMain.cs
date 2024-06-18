@@ -16,13 +16,51 @@ namespace QLDSV_TC.views
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmMain()
-        {
+        {   
             InitializeComponent();
-
-            if (Program.mGroup.Equals("SV"))
+            if (Program.mGroup.Equals("PGV"))
+            {
+                ribbonQuanLyKhoa_PGV.Visible = true;
+                ribbonQuanLyKhoa_PGV.Enabled = true;
+                reportPagePGV_Khoa.Visible = true;
+                reportPagePGV_Khoa.Enabled = true;
+                barBtnTaoLogin.Enabled = true;
+                ribbonControl1.SelectedPage = ribbonPageQuanLy;
+                btnHocPhi.Enabled = false;
+                ribbonSinhVien.Visible = false;
+                barDtnReportDongHP.Enabled = false;
+            }
+            else if ((Program.mGroup.Equals("KHOA")))
+            {
+                ribbonQuanLyKhoa_PGV.Visible = true;
+                ribbonQuanLyKhoa_PGV.Enabled = true;
+                reportPagePGV_Khoa.Visible = true;
+                reportPagePGV_Khoa.Enabled = true;
+                barBtnTaoLogin.Enabled = true;
+                ribbonControl1.SelectedPage = ribbonPageQuanLy;
+                btnHocPhi.Enabled = false;
+                ribbonSinhVien.Visible = false;
+                barDtnReportDongHP.Enabled = false;
+            }
+            else if (Program.mGroup.Equals("SV"))
             {
                 ribbonSinhVien.Visible = true;
-                Ribbon.SelectedPage = ribbonSinhVien;
+                ribbonPageBaoCao.Visible = false;
+                ribbonPageQuanLy.Visible = false;
+                barBtnTaoLogin.Visibility = BarItemVisibility.Never;
+                ribbonControl1.SelectedPage = ribbonSinhVien;
+            }
+            else if (Program.mGroup.Equals("PKT"))
+            {
+
+                ribbonQuanLyPKT.Visible = true;
+                ribbonQuanLyPKT.Enabled = true;
+                ribbonQuanLyKhoa_PGV.Enabled = false;
+                reportPagePKT.Visible = true;
+                reportPagePKT.Enabled = true;
+                barBtnTaoLogin.Enabled = true;
+                ribbonSinhVien.Visible = false;
+                reportPagePGV_Khoa.Enabled = false;
             }
         }
         private Form CheckExists(Type ftype)
@@ -54,10 +92,6 @@ namespace QLDSV_TC.views
                 Program.Login.loadAgain();
 
             }
-        }
-        private void Main_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void barButtonXEMDIEM_ItemClick(object sender, ItemClickEventArgs e)
@@ -137,6 +171,21 @@ namespace QLDSV_TC.views
                 Program.frmClass.MdiParent = this;
                 Program.frmClass.WindowState = FormWindowState.Maximized;
                 Program.frmClass.Show();
+            }
+        }
+
+        private void btnDX_ItemClick_1(object sender, ItemClickEventArgs e)
+        {
+            DialogResult dialog = XtraMessageBox.Show("Bạn có muốn đăng xuất không?", "Thông báo!", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                foreach (Form frm in this.MdiChildren)
+                    frm.Close();
+                Program.frmMain.Dispose();
+                Program.Login.Visible = true;
+                Program.bdsDSPM.RemoveFilter();
+                Program.Login.loadAgain();
+
             }
         }
     }

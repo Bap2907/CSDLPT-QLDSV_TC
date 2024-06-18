@@ -96,10 +96,10 @@ namespace QLDSV_TC.views
                 String strCmd = "EXEC SP_DANGNHAP '" + Program.mlogin + "'";
                 Program.myReader = Program.ExecSqlDataReader(strCmd);
             }
-            else if (!cmbKhoa.Text.ToString().Equals("Kế Toán"))
+            else if (!cmbKhoa.Text.ToString().Equals("PKT"))
             {
                 Program.mlogin = "SVIEN";
-                Program.pass = "1";
+                Program.pass = "123";
                 loginNameSV = txtUserName.Text;
                 Program.passSV = txtPass.Text;
 

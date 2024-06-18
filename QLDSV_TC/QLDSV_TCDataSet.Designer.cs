@@ -2630,8 +2630,6 @@ namespace QLDSV_TC {
             
             private global::System.Data.DataColumn columnPASSWORD;
             
-            private global::System.Data.DataColumn columnrowguid;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public SINHVIENDataTable() {
@@ -2739,14 +2737,6 @@ namespace QLDSV_TC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn rowguidColumn {
-                get {
-                    return this.columnrowguid;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2782,7 +2772,7 @@ namespace QLDSV_TC {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public SINHVIENRow AddSINHVIENRow(string MASV, string HO, string TEN, bool PHAI, string DIACHI, System.DateTime NGAYSINH, LOPRow parentLOPRowByFK_SINHVIEN_LOP, bool DANGHIHOC, string PASSWORD, System.Guid rowguid) {
+            public SINHVIENRow AddSINHVIENRow(string MASV, string HO, string TEN, bool PHAI, string DIACHI, System.DateTime NGAYSINH, LOPRow parentLOPRowByFK_SINHVIEN_LOP, bool DANGHIHOC, string PASSWORD) {
                 SINHVIENRow rowSINHVIENRow = ((SINHVIENRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MASV,
@@ -2793,8 +2783,7 @@ namespace QLDSV_TC {
                         NGAYSINH,
                         null,
                         DANGHIHOC,
-                        PASSWORD,
-                        rowguid};
+                        PASSWORD};
                 if ((parentLOPRowByFK_SINHVIEN_LOP != null)) {
                     columnValuesArray[6] = parentLOPRowByFK_SINHVIEN_LOP[0];
                 }
@@ -2836,7 +2825,6 @@ namespace QLDSV_TC {
                 this.columnMALOP = base.Columns["MALOP"];
                 this.columnDANGHIHOC = base.Columns["DANGHIHOC"];
                 this.columnPASSWORD = base.Columns["PASSWORD"];
-                this.columnrowguid = base.Columns["rowguid"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2860,8 +2848,6 @@ namespace QLDSV_TC {
                 base.Columns.Add(this.columnDANGHIHOC);
                 this.columnPASSWORD = new global::System.Data.DataColumn("PASSWORD", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPASSWORD);
-                this.columnrowguid = new global::System.Data.DataColumn("rowguid", typeof(global::System.Guid), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnrowguid);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMASV}, true));
                 this.columnMASV.AllowDBNull = false;
@@ -2877,7 +2863,6 @@ namespace QLDSV_TC {
                 this.columnMALOP.MaxLength = 10;
                 this.columnDANGHIHOC.AllowDBNull = false;
                 this.columnPASSWORD.MaxLength = 40;
-                this.columnrowguid.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3910,17 +3895,6 @@ namespace QLDSV_TC {
                 }
                 set {
                     this[this.tableSINHVIEN.PASSWORDColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.Guid rowguid {
-                get {
-                    return ((global::System.Guid)(this[this.tableSINHVIEN.rowguidColumn]));
-                }
-                set {
-                    this[this.tableSINHVIEN.rowguidColumn] = value;
                 }
             }
             
@@ -6963,11 +6937,10 @@ SELECT MAMH, TENMH, SOTIET_LT, SOTIET_TH, rowguid FROM MONHOC WHERE (MAMH = @MAM
             tableMapping.ColumnMappings.Add("MALOP", "MALOP");
             tableMapping.ColumnMappings.Add("DANGHIHOC", "DANGHIHOC");
             tableMapping.ColumnMappings.Add("PASSWORD", "PASSWORD");
-            tableMapping.ColumnMappings.Add("rowguid", "rowguid");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[SINHVIEN] WHERE (([MASV] = @Original_MASV) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ([PHAI] = @Original_PHAI) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_NGAYSINH = 1 AND [NGAYSINH] IS NULL) OR ([NGAYSINH] = @Original_NGAYSINH)) AND ([MALOP] = @Original_MALOP) AND ([DANGHIHOC] = @Original_DANGHIHOC) AND ((@IsNull_PASSWORD = 1 AND [PASSWORD] IS NULL) OR ([PASSWORD] = @Original_PASSWORD)) AND ([rowguid] = @Original_rowguid))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[SINHVIEN] WHERE (([MASV] = @Original_MASV) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ([PHAI] = @Original_PHAI) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_NGAYSINH = 1 AND [NGAYSINH] IS NULL) OR ([NGAYSINH] = @Original_NGAYSINH)) AND ([MALOP] = @Original_MALOP) AND ([DANGHIHOC] = @Original_DANGHIHOC) AND ((@IsNull_PASSWORD = 1 AND [PASSWORD] IS NULL) OR ([PASSWORD] = @Original_PASSWORD)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MASV", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -6981,11 +6954,10 @@ SELECT MAMH, TENMH, SOTIET_LT, SOTIET_TH, rowguid FROM MONHOC WHERE (MAMH = @MAM
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DANGHIHOC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DANGHIHOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PASSWORD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PASSWORD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PASSWORD", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PASSWORD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rowguid", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rowguid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[SINHVIEN] ([MASV], [HO], [TEN], [PHAI], [DIACHI], [NGAYSINH], [MALOP], [DANGHIHOC], [PASSWORD], [rowguid]) VALUES (@MASV, @HO, @TEN, @PHAI, @DIACHI, @NGAYSINH, @MALOP, @DANGHIHOC, @PASSWORD, @rowguid);
-SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowguid FROM SINHVIEN WHERE (MASV = @MASV)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[SINHVIEN] ([MASV], [HO], [TEN], [PHAI], [DIACHI], [NGAYSINH], [MALOP], [DANGHIHOC], [PASSWORD]) VALUES (@MASV, @HO, @TEN, @PHAI, @DIACHI, @NGAYSINH, @MALOP, @DANGHIHOC, @PASSWORD);
+SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD FROM SINHVIEN WHERE (MASV = @MASV)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASV", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -6996,11 +6968,10 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MALOP", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MALOP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DANGHIHOC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DANGHIHOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PASSWORD", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PASSWORD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rowguid", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rowguid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[SINHVIEN] SET [MASV] = @MASV, [HO] = @HO, [TEN] = @TEN, [PHAI] = @PHAI, [DIACHI] = @DIACHI, [NGAYSINH] = @NGAYSINH, [MALOP] = @MALOP, [DANGHIHOC] = @DANGHIHOC, [PASSWORD] = @PASSWORD, [rowguid] = @rowguid WHERE (([MASV] = @Original_MASV) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ([PHAI] = @Original_PHAI) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_NGAYSINH = 1 AND [NGAYSINH] IS NULL) OR ([NGAYSINH] = @Original_NGAYSINH)) AND ([MALOP] = @Original_MALOP) AND ([DANGHIHOC] = @Original_DANGHIHOC) AND ((@IsNull_PASSWORD = 1 AND [PASSWORD] IS NULL) OR ([PASSWORD] = @Original_PASSWORD)) AND ([rowguid] = @Original_rowguid));
-SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowguid FROM SINHVIEN WHERE (MASV = @MASV)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[SINHVIEN] SET [MASV] = @MASV, [HO] = @HO, [TEN] = @TEN, [PHAI] = @PHAI, [DIACHI] = @DIACHI, [NGAYSINH] = @NGAYSINH, [MALOP] = @MALOP, [DANGHIHOC] = @DANGHIHOC, [PASSWORD] = @PASSWORD WHERE (([MASV] = @Original_MASV) AND ([HO] = @Original_HO) AND ([TEN] = @Original_TEN) AND ([PHAI] = @Original_PHAI) AND ((@IsNull_DIACHI = 1 AND [DIACHI] IS NULL) OR ([DIACHI] = @Original_DIACHI)) AND ((@IsNull_NGAYSINH = 1 AND [NGAYSINH] IS NULL) OR ([NGAYSINH] = @Original_NGAYSINH)) AND ([MALOP] = @Original_MALOP) AND ([DANGHIHOC] = @Original_DANGHIHOC) AND ((@IsNull_PASSWORD = 1 AND [PASSWORD] IS NULL) OR ([PASSWORD] = @Original_PASSWORD)));
+SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD FROM SINHVIEN WHERE (MASV = @MASV)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MASV", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASV", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HO", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -7011,7 +6982,6 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MALOP", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MALOP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DANGHIHOC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DANGHIHOC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PASSWORD", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PASSWORD", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rowguid", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rowguid", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MASV", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MASV", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HO", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HO", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TEN", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEN", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -7024,7 +6994,6 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DANGHIHOC", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DANGHIHOC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PASSWORD", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PASSWORD", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PASSWORD", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PASSWORD", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_rowguid", global::System.Data.SqlDbType.UniqueIdentifier, 0, global::System.Data.ParameterDirection.Input, 0, 0, "rowguid", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7040,8 +7009,8 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowguid" +
-                " FROM dbo.SINHVIEN";
+            this._commandCollection[0].CommandText = "SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD FROM dbo" +
+                ".SINHVIEN";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7102,7 +7071,7 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_MASV, string Original_HO, string Original_TEN, bool Original_PHAI, string Original_DIACHI, global::System.Nullable<global::System.DateTime> Original_NGAYSINH, string Original_MALOP, bool Original_DANGHIHOC, string Original_PASSWORD, System.Guid Original_rowguid) {
+        public virtual int Delete(string Original_MASV, string Original_HO, string Original_TEN, bool Original_PHAI, string Original_DIACHI, global::System.Nullable<global::System.DateTime> Original_NGAYSINH, string Original_MALOP, bool Original_DANGHIHOC, string Original_PASSWORD) {
             if ((Original_MASV == null)) {
                 throw new global::System.ArgumentNullException("Original_MASV");
             }
@@ -7153,7 +7122,6 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_PASSWORD));
             }
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((System.Guid)(Original_rowguid));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7174,7 +7142,7 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string MASV, string HO, string TEN, bool PHAI, string DIACHI, global::System.Nullable<global::System.DateTime> NGAYSINH, string MALOP, bool DANGHIHOC, string PASSWORD, System.Guid rowguid) {
+        public virtual int Insert(string MASV, string HO, string TEN, bool PHAI, string DIACHI, global::System.Nullable<global::System.DateTime> NGAYSINH, string MALOP, bool DANGHIHOC, string PASSWORD) {
             if ((MASV == null)) {
                 throw new global::System.ArgumentNullException("MASV");
             }
@@ -7219,7 +7187,6 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = ((string)(PASSWORD));
             }
-            this.Adapter.InsertCommand.Parameters[9].Value = ((System.Guid)(rowguid));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7250,7 +7217,6 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
                     string MALOP, 
                     bool DANGHIHOC, 
                     string PASSWORD, 
-                    System.Guid rowguid, 
                     string Original_MASV, 
                     string Original_HO, 
                     string Original_TEN, 
@@ -7259,8 +7225,7 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
                     global::System.Nullable<global::System.DateTime> Original_NGAYSINH, 
                     string Original_MALOP, 
                     bool Original_DANGHIHOC, 
-                    string Original_PASSWORD, 
-                    System.Guid Original_rowguid) {
+                    string Original_PASSWORD) {
             if ((MASV == null)) {
                 throw new global::System.ArgumentNullException("MASV");
             }
@@ -7305,58 +7270,56 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(PASSWORD));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((System.Guid)(rowguid));
             if ((Original_MASV == null)) {
                 throw new global::System.ArgumentNullException("Original_MASV");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_MASV));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_MASV));
             }
             if ((Original_HO == null)) {
                 throw new global::System.ArgumentNullException("Original_HO");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_HO));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_HO));
             }
             if ((Original_TEN == null)) {
                 throw new global::System.ArgumentNullException("Original_TEN");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_TEN));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_TEN));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(Original_PHAI));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(Original_PHAI));
             if ((Original_DIACHI == null)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_DIACHI));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_DIACHI));
             }
             if ((Original_NGAYSINH.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((System.DateTime)(Original_NGAYSINH.Value));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_NGAYSINH.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
             if ((Original_MALOP == null)) {
                 throw new global::System.ArgumentNullException("Original_MALOP");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_MALOP));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_MALOP));
             }
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(Original_DANGHIHOC));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((bool)(Original_DANGHIHOC));
             if ((Original_PASSWORD == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_PASSWORD));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_PASSWORD));
             }
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((System.Guid)(Original_rowguid));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -7386,7 +7349,6 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
                     string MALOP, 
                     bool DANGHIHOC, 
                     string PASSWORD, 
-                    System.Guid rowguid, 
                     string Original_MASV, 
                     string Original_HO, 
                     string Original_TEN, 
@@ -7395,9 +7357,8 @@ SELECT MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowgui
                     global::System.Nullable<global::System.DateTime> Original_NGAYSINH, 
                     string Original_MALOP, 
                     bool Original_DANGHIHOC, 
-                    string Original_PASSWORD, 
-                    System.Guid Original_rowguid) {
-            return this.Update(Original_MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, rowguid, Original_MASV, Original_HO, Original_TEN, Original_PHAI, Original_DIACHI, Original_NGAYSINH, Original_MALOP, Original_DANGHIHOC, Original_PASSWORD, Original_rowguid);
+                    string Original_PASSWORD) {
+            return this.Update(Original_MASV, HO, TEN, PHAI, DIACHI, NGAYSINH, MALOP, DANGHIHOC, PASSWORD, Original_MASV, Original_HO, Original_TEN, Original_PHAI, Original_DIACHI, Original_NGAYSINH, Original_MALOP, Original_DANGHIHOC, Original_PASSWORD);
         }
     }
     
