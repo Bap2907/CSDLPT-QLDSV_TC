@@ -40,7 +40,7 @@
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonRPDSSV_LTC = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonBangDiem = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonBDTK = new DevExpress.XtraBars.BarButtonItem();
             this.barbtnBangDiemSV = new DevExpress.XtraBars.BarButtonItem();
             this.barDtnReportDongHP = new DevExpress.XtraBars.BarButtonItem();
             this.barBtnTaoLogin = new DevExpress.XtraBars.BarButtonItem();
@@ -66,6 +66,7 @@
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(26, 24, 26, 24);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -80,7 +81,7 @@
             this.barButtonItem4,
             this.barButtonRPDSSV_LTC,
             this.barButtonBangDiem,
-            this.barButtonItem6,
+            this.barButtonBDTK,
             this.barbtnBangDiemSV,
             this.barDtnReportDongHP,
             this.barBtnTaoLogin,
@@ -90,12 +91,13 @@
             this.ribbonControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ribbonControl1.MaxItemId = 18;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 283;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPageQuanLy,
             this.ribbonSinhVien,
             this.ribbonPageBaoCao,
             this.ribbonPageCauHinh});
-            this.ribbonControl1.Size = new System.Drawing.Size(878, 209);
+            this.ribbonControl1.Size = new System.Drawing.Size(753, 177);
             // 
             // barButtonDANGKYLTC
             // 
@@ -183,13 +185,14 @@
             this.barButtonBangDiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonBangDiem.ImageOptions.LargeImage")));
             this.barButtonBangDiem.Name = "barButtonBangDiem";
             // 
-            // barButtonItem6
+            // barButtonBDTK
             // 
-            this.barButtonItem6.Caption = "Bảng Điểm Tổng Kết Theo Lớp";
-            this.barButtonItem6.Id = 12;
-            this.barButtonItem6.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.barButtonItem6.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
-            this.barButtonItem6.Name = "barButtonItem6";
+            this.barButtonBDTK.Caption = "Bảng Điểm Tổng Kết Theo Lớp";
+            this.barButtonBDTK.Id = 12;
+            this.barButtonBDTK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonBDTK.ImageOptions.Image")));
+            this.barButtonBDTK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonBDTK.ImageOptions.LargeImage")));
+            this.barButtonBDTK.Name = "barButtonBDTK";
+            this.barButtonBDTK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonBDTK_ItemClick);
             // 
             // barbtnBangDiemSV
             // 
@@ -282,7 +285,7 @@
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonItem4);
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonRPDSSV_LTC);
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonBangDiem);
-            this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonItem6);
+            this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonBDTK);
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barbtnBangDiemSV);
             this.reportPagePGV_Khoa.Name = "reportPagePGV_Khoa";
             // 
@@ -314,40 +317,39 @@
             this.toolStripMa,
             this.toolStripTen,
             this.toolStripKhoa});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 477);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 383);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.toolStrip1.Size = new System.Drawing.Size(878, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(753, 25);
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripMa
             // 
             this.toolStripMa.Name = "toolStripMa";
-            this.toolStripMa.Size = new System.Drawing.Size(33, 22);
+            this.toolStripMa.Size = new System.Drawing.Size(27, 22);
             this.toolStripMa.Text = "Mã:";
             // 
             // toolStripTen
             // 
             this.toolStripTen.Name = "toolStripTen";
-            this.toolStripTen.Size = new System.Drawing.Size(35, 22);
+            this.toolStripTen.Size = new System.Drawing.Size(28, 22);
             this.toolStripTen.Text = "Tên:";
             // 
             // toolStripKhoa
             // 
             this.toolStripKhoa.Name = "toolStripKhoa";
-            this.toolStripKhoa.Size = new System.Drawing.Size(46, 22);
+            this.toolStripKhoa.Size = new System.Drawing.Size(37, 22);
             this.toolStripKhoa.Text = "Khoa:";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(878, 502);
+            this.ClientSize = new System.Drawing.Size(753, 408);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.ribbonControl1);
             this.IsMdiContainer = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Ribbon = this.ribbonControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -387,7 +389,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
         private DevExpress.XtraBars.BarButtonItem barButtonRPDSSV_LTC;
         private DevExpress.XtraBars.BarButtonItem barButtonBangDiem;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
+        private DevExpress.XtraBars.BarButtonItem barButtonBDTK;
         private DevExpress.XtraBars.BarButtonItem barbtnBangDiemSV;
         private DevExpress.XtraBars.BarButtonItem barDtnReportDongHP;
         private DevExpress.XtraBars.BarButtonItem barBtnTaoLogin;

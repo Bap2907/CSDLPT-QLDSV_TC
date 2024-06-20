@@ -1,5 +1,4 @@
 ﻿using DevExpress.XtraBars;
-using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +23,7 @@ namespace QLDSV_TC.views
         {
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.GIANGVIEN' table. You can move, or remove it, as needed.
 
-            /*qLDSV_TCDataSet.EnforceConstraints = false;
+            qLDSV_TCDataSet.EnforceConstraints = false;
 
             this.gIANGVIENTableAdapter.Connection.ConnectionString = Program.connstr;
             this.gIANGVIENTableAdapter.Fill(this.qLDSV_TCDataSet.GIANGVIEN);
@@ -40,9 +39,9 @@ namespace QLDSV_TC.views
             this.dANGKYTableAdapter.Connection.ConnectionString = Program.connstr;
             this.dANGKYTableAdapter.Fill(this.qLDSV_TCDataSet.DANGKY);
 
-            Program.bdsDSPM.Filter = "TENPHONG not LIKE 'Kế Toán%'  ";
+            Program.bdsDSPM.Filter = "TENKHOA not LIKE 'PKT'  ";
             cbKhoa.DataSource = Program.bdsDSPM;
-            cbKhoa.DisplayMember = "TENPHONG";
+            cbKhoa.DisplayMember = "TENKHOA";
             cbKhoa.ValueMember = "TENSERVER";
             cbKhoa.SelectedValue = Program.servername;
 
@@ -54,7 +53,7 @@ namespace QLDSV_TC.views
             if (bdslOPTINCHI.Count == 0)
                 btnXoa.Enabled = btnSua.Enabled = false;
             else
-                btnXoa.Enabled = btnSua.Enabled = true;*/
+                btnXoa.Enabled = btnSua.Enabled = true;
 
         }
 
@@ -244,7 +243,11 @@ namespace QLDSV_TC.views
         {
 
         }
-
+        private void ltcMAGV_Format(object sender, ListControlConvertEventArgs e)
+        {
+            DataRowView row = (DataRowView)e.ListItem;
+            e.Value = row["HO"] + " " + row["TEN"];
+        }
         private void btnThoat_ItemClick(object sender, ItemClickEventArgs e)
         {
             if (MessageBox.Show("Bạn chắc chắn muốn thoát", "", MessageBoxButtons.OKCancel) == DialogResult.OK)

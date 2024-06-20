@@ -113,10 +113,11 @@ namespace QLDSV_TC.views
             if (frm != null) frm.Activate();
             else
             {
-                frmDangKyLTC frmDkLTC = new frmDangKyLTC();
-                frmDkLTC.MdiParent = this;
-                frmDkLTC.Show();
-
+                frmDangKyLTC frmDangKyLTC = new frmDangKyLTC();
+                frmDangKyLTC.MdiParent = this;
+                frmDangKyLTC.WindowState = FormWindowState.Maximized;
+                //Program.frmDangKyLTC.WindowState = FormWindowState.Maximized;
+                frmDangKyLTC.Show();
             }
         }
 
@@ -185,6 +186,20 @@ namespace QLDSV_TC.views
                 Program.Login.Visible = true;
                 Program.bdsDSPM.RemoveFilter();
                 Program.Login.loadAgain();
+
+            }
+        }
+
+        private void barButtonBDTK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.Xfrm_BangDiem_TongKetLop));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Xfrm_BangDiem_TongKetLop frmbdLop = new Xfrm_BangDiem_TongKetLop();
+                frmbdLop.MdiParent = this;
+                frmbdLop.WindowState = FormWindowState.Maximized;
+                frmbdLop.Show();
 
             }
         }

@@ -177,7 +177,7 @@ namespace QLDSV_TC.views
             this.lbKhoa.AutoSize = true;
             this.lbKhoa.Location = new System.Drawing.Point(285, 99);
             this.lbKhoa.Name = "lbKhoa";
-            this.lbKhoa.Size = new System.Drawing.Size(45, 16);
+            this.lbKhoa.Size = new System.Drawing.Size(49, 17);
             this.lbKhoa.TabIndex = 10;
             this.lbKhoa.Text = "lbKhoa";
             // 
@@ -186,7 +186,7 @@ namespace QLDSV_TC.views
             this.label14.AutoSize = true;
             this.label14.Location = new System.Drawing.Point(169, 100);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(35, 16);
+            this.label14.Size = new System.Drawing.Size(39, 17);
             this.label14.TabIndex = 9;
             this.label14.Text = "Khoa";
             // 
@@ -195,7 +195,7 @@ namespace QLDSV_TC.views
             this.label11.AutoSize = true;
             this.label11.Location = new System.Drawing.Point(169, 54);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(65, 16);
+            this.label11.Size = new System.Drawing.Size(71, 17);
             this.label11.TabIndex = 6;
             this.label11.Text = "Họ và Tên";
             // 
@@ -204,7 +204,7 @@ namespace QLDSV_TC.views
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(169, 35);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 16);
+            this.label10.Size = new System.Drawing.Size(84, 17);
             this.label10.TabIndex = 5;
             this.label10.Text = "Mã Sinh Viên";
             // 
@@ -213,7 +213,7 @@ namespace QLDSV_TC.views
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(169, 77);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(27, 16);
+            this.label9.Size = new System.Drawing.Size(31, 17);
             this.label9.TabIndex = 4;
             this.label9.Text = "Lớp";
             // 
@@ -222,7 +222,7 @@ namespace QLDSV_TC.views
             this.lbMaSv.AutoSize = true;
             this.lbMaSv.Location = new System.Drawing.Point(285, 35);
             this.lbMaSv.Name = "lbMaSv";
-            this.lbMaSv.Size = new System.Drawing.Size(50, 16);
+            this.lbMaSv.Size = new System.Drawing.Size(51, 17);
             this.lbMaSv.TabIndex = 3;
             this.lbMaSv.Text = "lbMaSV";
             // 
@@ -231,7 +231,7 @@ namespace QLDSV_TC.views
             this.lbLop.AutoSize = true;
             this.lbLop.Location = new System.Drawing.Point(285, 77);
             this.lbLop.Name = "lbLop";
-            this.lbLop.Size = new System.Drawing.Size(37, 16);
+            this.lbLop.Size = new System.Drawing.Size(41, 17);
             this.lbLop.TabIndex = 2;
             this.lbLop.Text = "lbLop";
             // 
@@ -240,7 +240,7 @@ namespace QLDSV_TC.views
             this.lbHoTen.AutoSize = true;
             this.lbHoTen.Location = new System.Drawing.Point(285, 54);
             this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(54, 16);
+            this.lbHoTen.Size = new System.Drawing.Size(58, 17);
             this.lbHoTen.TabIndex = 1;
             this.lbHoTen.Text = "lbHoTen";
             // 

@@ -1,4 +1,7 @@
 ﻿
+using System.Data;
+using System.Windows.Forms;
+
 namespace QLDSV_TC.views
 {
     partial class frmLTC
@@ -454,8 +457,8 @@ namespace QLDSV_TC.views
             // 
             // ltcMAGV
             // 
-            this.ltcMAGV.DataSource = this.bdsGV;
-            this.ltcMAGV.DisplayMember = "FULLNAME";
+            /*this.ltcMAGV.DataSource = this.bdsGV;
+            this.ltcMAGV.DisplayMember = "HO";
             this.ltcMAGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ltcMAGV.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ltcMAGV.FormattingEnabled = true;
@@ -470,8 +473,32 @@ namespace QLDSV_TC.views
             // bdsGV
             // 
             this.bdsGV.DataMember = "GIANGVIEN";
-            this.bdsGV.DataSource = this.qLDSV_TCDataSet;
+            this.bdsGV.DataSource = this.qLDSV_TCDataSet;*/
             // 
+            // Thiết lập nguồn dữ liệu cho BindingSource
+            this.bdsGV.DataMember = "GIANGVIEN";
+            this.bdsGV.DataSource = this.qLDSV_TCDataSet;
+
+            // Thiết lập DataSource cho ComboBox
+            this.ltcMAGV.DataSource = this.bdsGV;
+
+            // Thiết lập DisplayMember và ValueMember
+            this.ltcMAGV.DisplayMember = "HO"; // Tạm thời đặt là một cột bất kỳ
+            this.ltcMAGV.ValueMember = "MAGV";
+
+            // Đăng ký sự kiện Format để tùy chỉnh chuỗi hiển thị
+            this.ltcMAGV.Format += new ListControlConvertEventHandler(ltcMAGV_Format);
+
+            this.ltcMAGV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ltcMAGV.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ltcMAGV.FormattingEnabled = true;
+            this.ltcMAGV.Location = new System.Drawing.Point(535, 181);
+            this.ltcMAGV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ltcMAGV.Name = "ltcMAGV";
+            this.ltcMAGV.Size = new System.Drawing.Size(231, 29);
+            this.ltcMAGV.TabIndex = 5;
+            this.ltcMAGV.SelectedIndexChanged += new System.EventHandler(this.ltcMAGV_SelectedIndexChanged);
+
             // ltcMaMH
             // 
             this.ltcMaMH.DataSource = this.bdsMONHOC;
