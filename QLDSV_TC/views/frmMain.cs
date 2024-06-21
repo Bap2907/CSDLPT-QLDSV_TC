@@ -59,6 +59,7 @@ namespace QLDSV_TC.views
                 reportPagePKT.Visible = true;
                 reportPagePKT.Enabled = true;
                 barBtnTaoLogin.Enabled = true;
+                btnHocPhi.Enabled = true;
                 ribbonSinhVien.Visible = false;
                 reportPagePGV_Khoa.Enabled = false;
             }
@@ -242,6 +243,19 @@ namespace QLDSV_TC.views
                 frmbangdiem.WindowState = FormWindowState.Maximized;
                 frmbangdiem.Show();
 
+            }
+        }
+
+        private void btnHocPhi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.frmHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                frmHocPhi frmhp = new frmHocPhi();
+                frmhp.MdiParent = this;
+                frmhp.WindowState = FormWindowState.Maximized;
+                frmhp.Show();
             }
         }
     }

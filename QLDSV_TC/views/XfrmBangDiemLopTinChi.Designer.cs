@@ -189,7 +189,7 @@ namespace QLDSV_TC.views
             this.simpleButton2.Appearance.Options.UseFont = true;
             this.simpleButton2.AppearancePressed.BackColor = System.Drawing.Color.White;
             this.simpleButton2.AppearancePressed.Options.UseBackColor = true;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            //this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
             this.simpleButton2.Location = new System.Drawing.Point(525, 238);
             this.simpleButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.simpleButton2.Name = "simpleButton2";

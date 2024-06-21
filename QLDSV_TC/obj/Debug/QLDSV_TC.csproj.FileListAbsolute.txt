@@ -223,3 +223,4 @@ C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.Diagram.v22.
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report_BangDiem_TongKet_Lop.resources
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Report_DS_LopTinChi.resources
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report_BangDiemLTC.resources
+C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.views.frmHocPhi.resources
