@@ -33,20 +33,20 @@ namespace QLDSV_TC.views
         {
 
             // TODO: This line of code loads data into the 'qLDSV_TCDataSet.LOPTINCHI' table. You can move, or remove it, as needed.
-            /*qLDSV_TCDataSet.EnforceConstraints = false;
+            qLDSV_TCDataSet.EnforceConstraints = false;
             this.lOPTINCHITableAdapter.Connection.ConnectionString = Program.connstr;
             this.lOPTINCHITableAdapter.Fill(this.qLDSV_TCDataSet.LOPTINCHI);
 
 
-            Program.bdsDSPM.Filter = "TENPHONG not LIKE 'Kế Toán%'  ";
+            Program.bdsDSPM.Filter = "TENKHOA not LIKE 'PKT%'  ";
             cbKhoa.DataSource = Program.bdsDSPM;
-            cbKhoa.DisplayMember = "TENPHONG";
+            cbKhoa.DisplayMember = "TENKHOA";
             cbKhoa.ValueMember = "TENSERVER";
             cbKhoa.SelectedIndex = Program.mPhongBan;
             if (Program.mGroup == "PGV")
             {
                 panelChonKhoa.Enabled = true;
-            }*/
+            }
 
             loadcbNienkhoa();
         }
@@ -78,52 +78,52 @@ namespace QLDSV_TC.views
         void loadcbNienkhoa()
         {
 
-            /*string cmd = "EXEC dbo.SP_GET_NIENKHOA";
+            string cmd = "EXEC dbo.SP_GET_NIENKHOA";
             DataTable dt = Program.ExecSqlDataTable(cmd);
             cbNIENKHOA.DataSource = dt;
             cbNIENKHOA.DisplayMember = "NIENKHOA";
-            cbNIENKHOA.ValueMember = "NIENKHOA";*/
+            cbNIENKHOA.ValueMember = "NIENKHOA";
 
         }
         void loadcbHocKi(string nienkhoa)
         {
 
-            /*string cmd = "EXEC dbo.SP_GET_HOCKY '" + nienkhoa + "'";
+            string cmd = "EXEC dbo.SP_GET_HOCKY '" + nienkhoa + "'";
             DataTable dt = Program.ExecSqlDataTable(cmd);
 
             cbHOCKY.DataSource = dt;
             cbHOCKY.DisplayMember = "HOCKY";
-            cbHOCKY.ValueMember = "HOCKY";*/
+            cbHOCKY.ValueMember = "HOCKY";
 
         }
         void loadMH(string nienkhoa, string hocki)
         {
 
-            /*string cmd = "EXEC dbo.SP_GET_MONHOC '" + nienkhoa + "', " + hocki;
+            string cmd = "EXEC dbo.SP_GET_MONHOC '" + nienkhoa + "', " + hocki;
             DataTable dt = Program.ExecSqlDataTable(cmd);
 
             cbMAMH.DataSource = dt;
             cbMAMH.DisplayMember = "MAMH";
-            cbMAMH.ValueMember = "MAMH";*/
+            cbMAMH.ValueMember = "MAMH";
         }
         void loadNhom(string nienkhoa, string hocki, string mamonhoc)
         {
 
-            /*string cmd = "EXEC dbo.SP_GET_NHOM '" + nienkhoa + "', " + hocki + ", '" + mamonhoc + "'";
+            string cmd = "EXEC dbo.SP_GET_NHOM '" + nienkhoa + "', " + hocki + ", '" + mamonhoc + "'";
             DataTable dt = Program.ExecSqlDataTable(cmd);
 
             cbNHOM.DataSource = dt;
             cbNHOM.DisplayMember = "NHOM";
-            cbNHOM.ValueMember = "NHOM";*/
+            cbNHOM.ValueMember = "NHOM";
         }
 
 
         DataTable dkTable = new DataTable();
         private void loatBtnBD()
         {
-            /*string cmd = "EXEC SP_DSDKMH '" + cbNIENKHOA.Text + "', " + cbHOCKY.Text + ", " + cbNHOM.Text + ", '" + cbMAMH.Text + "'";
+            string cmd = "EXEC SP_DSDKMH '" + cbNIENKHOA.Text + "', " + cbHOCKY.Text + ", " + cbNHOM.Text + ", '" + cbMAMH.Text + "'";
             dkTable = Program.ExecSqlDataTable(cmd);
-            this.gridControl1.DataSource = dkTable;*/
+            this.gridControl1.DataSource = dkTable;
         }
 
 
@@ -144,28 +144,28 @@ namespace QLDSV_TC.views
 
         private void btnBD_Click(object sender, EventArgs e)
         {
-            /*string cmdd = "EXEC SP_SEARCH_LTC'" + cbNIENKHOA.Text + "', " + cbHOCKY.Text + ", " + cbNHOM.Text + ", '" + cbMAMH.Text + "'";
+            string cmdd = "EXEC SP_SEARCH_LTC'" + cbNIENKHOA.Text + "', " + cbHOCKY.Text + ", " + cbNHOM.Text + ", '" + cbMAMH.Text + "'";
             DataTable ltcTable = Program.ExecSqlDataTable(cmdd);
             this.gridControl2.DataSource = ltcTable;
             btnCN.Enabled = true;
             cbKhoa.Enabled = false;
             loatBtnBD();
             panelControl1.Enabled = btnBD.Enabled = false;
-            /*this.DIEM_CK.OptionsColumn.ReadOnly = false; 
-            this.DIEM_GK.OptionsColumn.ReadOnly = false; 
-            this.DIEM_CC.OptionsColumn.ReadOnly = false;*
+            this.DIEM_CK.OptionsColumn.ReadOnly = false;
+            this.DIEM_GK.OptionsColumn.ReadOnly = false;
+            this.DIEM_CC.OptionsColumn.ReadOnly = false;
             this.DIEM_CC.OptionsColumn.AllowFocus = true;
             this.DIEM_GK.OptionsColumn.AllowFocus = true;
             this.DIEM_CK.OptionsColumn.AllowFocus = true;
             gridControl1.Enabled = true;
             this.btnCN.BackColor = System.Drawing.Color.SkyBlue;
-            this.btnBD.BackColor = System.Drawing.SystemColors.ControlDark; ;*/
+            this.btnBD.BackColor = System.Drawing.SystemColors.ControlDark; ;
 
         }
 
         private void btnCN_Click(object sender, EventArgs e)
         {
-            /*DataTable dt = new DataTable();
+            DataTable dt = new DataTable();
             dt.Columns.Add("MALTC", typeof(int));
             dt.Columns.Add("MASV", typeof(String));
             dt.Columns.Add("DIEM_CC", typeof(int));
@@ -194,9 +194,9 @@ namespace QLDSV_TC.views
                 panelControl1.Enabled = btnBD.Enabled = true;
                 btnCN.Enabled = false;
                 cbKhoa.Enabled = true;
-                /*this.DIEM_CK.OptionsColumn.ReadOnly = true;
+                this.DIEM_CK.OptionsColumn.ReadOnly = true;
                 this.DIEM_GK.OptionsColumn.ReadOnly = true;
-                this.DIEM_CC.OptionsColumn.ReadOnly = true;*
+                this.DIEM_CC.OptionsColumn.ReadOnly = true;
                 this.DIEM_CC.OptionsColumn.AllowFocus = false;
                 this.DIEM_GK.OptionsColumn.AllowFocus = false;
                 this.DIEM_CK.OptionsColumn.AllowFocus = false;
@@ -208,7 +208,7 @@ namespace QLDSV_TC.views
             {
                 MessageBox.Show("Ghi điểm thất bại\n" + ex.Message, "", MessageBoxButtons.OK);
                 loatBtnBD();
-            }*/
+            }
 
 
 
