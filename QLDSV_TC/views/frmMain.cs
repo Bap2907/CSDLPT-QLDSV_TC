@@ -102,6 +102,7 @@ namespace QLDSV_TC.views
             {
                 frmXemDiem frmxemdiem = new frmXemDiem();
                 frmxemdiem.MdiParent = this;
+                frmxemdiem.WindowState = FormWindowState.Maximized;
                 frmxemdiem.Show();
 
             }
@@ -116,7 +117,6 @@ namespace QLDSV_TC.views
                 frmDangKyLTC frmDangKyLTC = new frmDangKyLTC();
                 frmDangKyLTC.MdiParent = this;
                 frmDangKyLTC.WindowState = FormWindowState.Maximized;
-                //Program.frmDangKyLTC.WindowState = FormWindowState.Maximized;
                 frmDangKyLTC.Show();
             }
         }
@@ -200,6 +200,47 @@ namespace QLDSV_TC.views
                 frmbdLop.MdiParent = this;
                 frmbdLop.WindowState = FormWindowState.Maximized;
                 frmbdLop.Show();
+
+            }
+        }
+
+        private void barButtonDSLTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.Xfrm_ReportDSLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Xfrm_ReportDSLTC frmhp = new Xfrm_ReportDSLTC();
+                frmhp.MdiParent = this;
+                frmhp.WindowState = FormWindowState.Maximized;
+                frmhp.Show();
+
+            }
+        }
+
+        private void barButtonRPDSSV_LTC_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.XfrmDanhSachSinhVienDangKyLTC));
+            if (frm != null) frm.Activate();
+            else
+            {
+                XfrmDanhSachSinhVienDangKyLTC frmDSSV_DK_LTC = new XfrmDanhSachSinhVienDangKyLTC();
+                frmDSSV_DK_LTC.MdiParent = this;
+                frmDSSV_DK_LTC.WindowState = FormWindowState.Maximized;
+                frmDSSV_DK_LTC.Show();
+            }
+        }
+
+        private void barButtonBangDiem_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.XfrmBangDiemLopTinChi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                XfrmBangDiemLopTinChi frmbangdiem = new XfrmBangDiemLopTinChi();
+                frmbangdiem.MdiParent = this;
+                frmbangdiem.WindowState = FormWindowState.Maximized;
+                frmbangdiem.Show();
 
             }
         }

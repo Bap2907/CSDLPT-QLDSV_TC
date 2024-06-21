@@ -37,7 +37,7 @@
             this.barButtonLTC = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonNhapDiem = new DevExpress.XtraBars.BarButtonItem();
             this.btnHocPhi = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonDSLTC = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonRPDSSV_LTC = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonBangDiem = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonBDTK = new DevExpress.XtraBars.BarButtonItem();
@@ -78,7 +78,7 @@
             this.barButtonLTC,
             this.barButtonNhapDiem,
             this.btnHocPhi,
-            this.barButtonItem4,
+            this.barButtonDSLTC,
             this.barButtonRPDSSV_LTC,
             this.barButtonBangDiem,
             this.barButtonBDTK,
@@ -161,13 +161,14 @@
             this.btnHocPhi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("btnHocPhi.ImageOptions.LargeImage")));
             this.btnHocPhi.Name = "btnHocPhi";
             // 
-            // barButtonItem4
+            // barButtonDSLTC
             // 
-            this.barButtonItem4.Caption = "Danh Sách Lớp Tín Chỉ";
-            this.barButtonItem4.Id = 8;
-            this.barButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.barButtonItem4.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
-            this.barButtonItem4.Name = "barButtonItem4";
+            this.barButtonDSLTC.Caption = "Danh Sách Lớp Tín Chỉ";
+            this.barButtonDSLTC.Id = 8;
+            this.barButtonDSLTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonDSLTC.ImageOptions.Image")));
+            this.barButtonDSLTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonDSLTC.ImageOptions.LargeImage")));
+            this.barButtonDSLTC.Name = "barButtonDSLTC";
+            this.barButtonDSLTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonDSLTC_ItemClick);
             // 
             // barButtonRPDSSV_LTC
             // 
@@ -176,6 +177,7 @@
             this.barButtonRPDSSV_LTC.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonRPDSSV_LTC.ImageOptions.Image")));
             this.barButtonRPDSSV_LTC.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonRPDSSV_LTC.ImageOptions.LargeImage")));
             this.barButtonRPDSSV_LTC.Name = "barButtonRPDSSV_LTC";
+            this.barButtonRPDSSV_LTC.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonRPDSSV_LTC_ItemClick);
             // 
             // barButtonBangDiem
             // 
@@ -184,6 +186,7 @@
             this.barButtonBangDiem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonBangDiem.ImageOptions.Image")));
             this.barButtonBangDiem.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonBangDiem.ImageOptions.LargeImage")));
             this.barButtonBangDiem.Name = "barButtonBangDiem";
+            this.barButtonBangDiem.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonBangDiem_ItemClick);
             // 
             // barButtonBDTK
             // 
@@ -282,7 +285,7 @@
             // 
             // reportPagePGV_Khoa
             // 
-            this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonItem4);
+            this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonDSLTC);
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonRPDSSV_LTC);
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonBangDiem);
             this.reportPagePGV_Khoa.ItemLinks.Add(this.barButtonBDTK);
@@ -386,7 +389,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup reportPagePGV_Khoa;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPageCauHinh;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
+        private DevExpress.XtraBars.BarButtonItem barButtonDSLTC;
         private DevExpress.XtraBars.BarButtonItem barButtonRPDSSV_LTC;
         private DevExpress.XtraBars.BarButtonItem barButtonBangDiem;
         private DevExpress.XtraBars.BarButtonItem barButtonBDTK;

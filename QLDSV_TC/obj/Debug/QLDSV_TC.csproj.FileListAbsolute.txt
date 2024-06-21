@@ -221,3 +221,5 @@ C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.XtraPivotGri
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.XtraDiagram.v22.2.xml
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\bin\Debug\DevExpress.Diagram.v22.2.Core.xml
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report_BangDiem_TongKet_Lop.resources
+C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.Report_DS_LopTinChi.resources
+C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report_BangDiemLTC.resources
