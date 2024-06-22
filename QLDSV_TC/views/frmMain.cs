@@ -16,7 +16,7 @@ namespace QLDSV_TC.views
     public partial class frmMain : DevExpress.XtraBars.Ribbon.RibbonForm
     {
         public frmMain()
-        {   
+        {
             InitializeComponent();
             if (Program.mGroup.Equals("PGV"))
             {
@@ -256,6 +256,34 @@ namespace QLDSV_TC.views
                 frmhp.MdiParent = this;
                 frmhp.WindowState = FormWindowState.Maximized;
                 frmhp.Show();
+            }
+        }
+
+        private void barbtnBangDiemSV_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.Xfrm_Report_BangDiemSV));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Xfrm_Report_BangDiemSV frmbd = new Xfrm_Report_BangDiemSV();
+                frmbd.MdiParent = this;
+                frmbd.WindowState = FormWindowState.Maximized;
+                frmbd.Show();
+
+            }
+        }
+
+        private void barDtnReportDongHP_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            Form frm = CheckExists(typeof(views.Xfrm_ReportHocPhi));
+            if (frm != null) frm.Activate();
+            else
+            {
+                Xfrm_ReportHocPhi frmbd = new Xfrm_ReportHocPhi();
+                frmbd.MdiParent = this;
+                frmbd.WindowState = FormWindowState.Maximized;
+                frmbd.Show();
+
             }
         }
     }

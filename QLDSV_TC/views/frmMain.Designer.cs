@@ -205,6 +205,7 @@
             this.barbtnBangDiemSV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barbtnBangDiemSV.ImageOptions.Image")));
             this.barbtnBangDiemSV.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barbtnBangDiemSV.ImageOptions.LargeImage")));
             this.barbtnBangDiemSV.Name = "barbtnBangDiemSV";
+            this.barbtnBangDiemSV.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barbtnBangDiemSV_ItemClick);
             // 
             // barDtnReportDongHP
             // 
@@ -213,6 +214,7 @@
             this.barDtnReportDongHP.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barDtnReportDongHP.ImageOptions.Image")));
             this.barDtnReportDongHP.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barDtnReportDongHP.ImageOptions.LargeImage")));
             this.barDtnReportDongHP.Name = "barDtnReportDongHP";
+            this.barDtnReportDongHP.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barDtnReportDongHP_ItemClick);
             // 
             // barBtnTaoLogin
             // 
