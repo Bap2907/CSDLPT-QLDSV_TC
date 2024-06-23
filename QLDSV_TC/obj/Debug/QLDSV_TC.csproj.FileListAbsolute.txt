@@ -226,3 +226,4 @@ C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.views.frmHocPhi.resources
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report_PhieuDiemTheoSinhVien.resources
 C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.reports.Report_HocPhiTheoLop.resources
+C:\CSDLPT\mainproject\CSDLPT-QLDSV_TC\QLDSV_TC\obj\Debug\QLDSV_TC.views.frmCreateLogin.resources

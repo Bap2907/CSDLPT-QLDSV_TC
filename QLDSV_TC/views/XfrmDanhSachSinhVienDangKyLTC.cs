@@ -143,18 +143,31 @@ namespace QLDSV_TC.views
             }
             else
             {
-                Report_DS_SV_DangKy_LTC rpt = new Report_DS_SV_DangKy_LTC(cbNIENKHOA.Text, int.Parse(cbHOCKY.Text), cbMAMH.SelectedValue.ToString(), int.Parse(cbNHOM.Text));
+                // Kiểm tra dữ liệu từ stored procedure trước khi tạo báo cáo
+                string cmd = "EXEC dbo.SP_REPORT_DS_DANGKY_LOPTINCHI '" + cbNIENKHOA.Text + "', " + int.Parse(cbHOCKY.Text) + ", " + int.Parse(cbNHOM.Text) + ", '" + cbMAMH.SelectedValue.ToString() + "'";
+                DataTable dt = Program.ExecSqlDataTable(cmd);
 
-                rpt.labelTieuDe.Text = "DANH SÁCH SINH VIÊN ĐĂNG KÝ LỚP TÍN CHỈ \n KHOA " + cbKhoa.Text.ToUpper();
-                rpt.lbNienKhoa.Text = cbNIENKHOA.Text;
-                rpt.lbHocKy.Text = cbHOCKY.Text;
-                rpt.lbMonHoc.Text = cbMAMH.Text;
-                rpt.lbNhom.Text = cbNHOM.Text;
-                ReportPrintTool print = new ReportPrintTool(rpt);
-                print.ShowPreviewDialog();
+                if (dt.Rows.Count == 0)
+                {
+                    MessageBox.Show("LỚP TÍN CHỈ ĐÃ BỊ HỦY HOẶC KHÔNG CÓ SINH VIÊN ĐĂNG KÝ", "THÔNG BÁO", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    // Tạo và hiển thị báo cáo nếu có dữ liệu
+                    Report_DS_SV_DangKy_LTC rpt = new Report_DS_SV_DangKy_LTC(cbNIENKHOA.Text, int.Parse(cbHOCKY.Text), cbMAMH.SelectedValue.ToString(), int.Parse(cbNHOM.Text));
+
+                    rpt.labelTieuDe.Text = "DANH SÁCH SINH VIÊN ĐĂNG KÝ LỚP TÍN CHỈ \n KHOA " + cbKhoa.Text.ToUpper();
+                    rpt.lbNienKhoa.Text = cbNIENKHOA.Text;
+                    rpt.lbHocKy.Text = cbHOCKY.Text;
+                    rpt.lbMonHoc.Text = cbMAMH.Text;
+                    rpt.lbNhom.Text = cbNHOM.Text;
+
+                    ReportPrintTool print = new ReportPrintTool(rpt);
+                    print.ShowPreviewDialog();
+                }
             }
-
         }
+
 
 
     }

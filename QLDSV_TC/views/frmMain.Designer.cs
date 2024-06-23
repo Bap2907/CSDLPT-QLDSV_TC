@@ -223,6 +223,7 @@
             this.barBtnTaoLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barBtnTaoLogin.ImageOptions.Image")));
             this.barBtnTaoLogin.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barBtnTaoLogin.ImageOptions.LargeImage")));
             this.barBtnTaoLogin.Name = "barBtnTaoLogin";
+            this.barBtnTaoLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnTaoLogin_ItemClick);
             // 
             // btnChangePass
             // 
@@ -311,7 +312,6 @@
             // ribbonPageGroup5
             // 
             this.ribbonPageGroup5.ItemLinks.Add(this.barBtnTaoLogin);
-            this.ribbonPageGroup5.ItemLinks.Add(this.btnChangePass);
             this.ribbonPageGroup5.ItemLinks.Add(this.btnDX);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
